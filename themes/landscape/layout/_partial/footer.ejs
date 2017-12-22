@@ -1,0 +1,17 @@
+<footer id="footer">
+    <% console.log(site.data.hexo)%>
+
+  <% if (theme.sidebar === 'bottom'){ %>
+    <%- partial('_partial/sidebar') %>
+  <% } %>
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
+      <%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>
+      <% for (var key in site.data.hexo) { %>
+        <% console.log(JSON.stringify(site.data.hexo))%>
+        <br><p> <%= key %> </p>
+      <% } %>
+    </div>
+  </div>
+</footer>
