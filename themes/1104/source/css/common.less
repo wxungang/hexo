@@ -1,0 +1,35 @@
+/** 
+    common created by xiaogang on 2017/12/25
+    功能描述：
+*/
+@import "vari";
+body {
+  margin: 0;
+  padding: 0;
+  color: @medium;
+}
+
+.layout-content{
+  padding-top: @height_header;
+}
+
+@import "mixins/border";
+.up-border {
+  .up-border(border);
+}
+
+.up-border-top {
+  .up-border(border-top);
+}
+
+.up-border-right {
+  .up-border(border-right);
+}
+
+.up-border-bottom {
+  .up-border(border-bottom);
+}
+
+.up-border-left {
+  .up-border(border-left);
+}

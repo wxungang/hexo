@@ -1,18 +1,29 @@
+<!DOCTYPE html>
+<!--
+所有的文档 共用这个进行渲染
+通过设置不同的body 而已
+-->
+<html>
+<!--
+导入head 部分
+-->
 <%- partial('_partial/head') %>
 <body>
-  <div id="container" class="container">
-    <div id="wrap">
-      <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
-      <div class="outer">
-        <section id="main"><%- body %></section>
-        <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
-          <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
-        <% } %>
-      </div>
-      <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+<div class="hexo-layout">
+    <!--
+     导入header 模板
+    -->
+    <%- partial('_partial/header', {
+        context: 'layout'
+    }, {
+        cache: false
+    }) %>
+    <div class="layout-content">
+        <!--
+            其他模板内容输出渲染
+        -->
+        <%- body %>
     </div>
-    <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
-    <%- partial('_partial/after-footer') %>
-  </div>
+</div>
 </body>
 </html>

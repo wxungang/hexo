@@ -1,0 +1,11 @@
+<div class="header-nav-down">
+    <% //console.log(props); %>
+    <a class="nav-item-title"><%- props.text %></a>
+    <div class="nav-items">
+        <% for(let item of props.items) { %>
+        <a class="nav-item" href="<%- url_for(item.link) %>" target="_blank">
+            <%= item.text %>
+        </a>
+        <% } %>
+    </div>
+</div>

@@ -1,1 +1,30 @@
-<%- partial('_partial/article', {post: page, index: false}) %>
+<%
+console.log('----page----');
+console.log('除开post和draft其他md 都采用page.ejs 模板渲染 （包括html 文件哦）');
+site.pages.each(p => {
+//    console.log(p.path);
+//    console.log(p.title);
+});
+%>
+<div class="hexo-page">
+    <!--
+    编辑 分页 的内容模板
+    填充layout.ejs 中的body 变量
+    -->
+    <%- (page.type || page.subType) && partial('_partial/pageNav', {
+        context: 'page',
+        type: page.type,
+        subType: page.subType,
+        finalType: page.finalType
+    }, {
+        cache: false,
+        only: false
+    }) %>
+
+    <div id="page-content" class="page-content<%- page.type ? ' pageNav' : '' %>">
+        <!--对应md 文档的 contents-->
+        <% //console.log(page) %>
+        <%- page.content %>
+    </div>
+</div>
+

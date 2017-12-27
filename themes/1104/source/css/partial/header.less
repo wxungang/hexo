@@ -1,0 +1,48 @@
+/** 
+    header created by xiaogang on 2017/12/25
+    功能描述：
+*/
+@import "../vari";
+
+header {
+  @height_header_nav: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: @height_header;
+  line-height: @height_header;
+  text-align: center;
+  background: #fff;
+
+  .logo {
+    position: absolute;
+  }
+
+  .header-nav {
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+
+    .header-nav-item {
+      width: 60px;
+      float: left;
+      padding: 0 10px;
+    }
+  }
+
+  .header-nav-down {
+
+    .nav-items {
+      display: none;
+    }
+    &:hover > .nav-items {
+      display: block;
+    }
+    .nav-item {
+      line-height: @height_header_nav;
+      display: block;
+    }
+  }
+}
