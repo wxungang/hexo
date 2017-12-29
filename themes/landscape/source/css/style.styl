@@ -27,14 +27,14 @@ html, body, #container
 
 body
   background: color-background
-  font: font-size/line-height font-sans
+  font: font-size font-sans
   -webkit-text-size-adjust: 100%
 
 .outer
   clearfix()
   max-width: (column-width + gutter-width) * columns + gutter-width
   margin: 0 auto
-  padding: 0 10px
+  padding: 0 gutter-width
 
 .inner
   column(columns)
@@ -72,8 +72,9 @@ if sidebar and sidebar isnt bottom
       column(main-column)
 
 if sidebar is left
-  #main
-    float: right
+  @media mq-normal
+    #main
+      float: right
 
 @import "_extend"
 @import "_partial/header"
@@ -83,7 +84,6 @@ if sidebar is left
 @import "_partial/footer"
 @import "_partial/highlight"
 @import "_partial/mobile"
-@import "_partial/totop"
 
 if sidebar
   @import "_partial/sidebar"

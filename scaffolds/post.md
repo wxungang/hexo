@@ -2,9 +2,12 @@
 title: {{ title }}
 date: {{ date }}
 tags:
-  - input your tag1
-  - input your tag2
+ - tag1 
+ - tag2
 categories:
-  - categories
-  - child categories
+ - parent
+ - child
 ---
+
+
+ {{ title }} {{ date }}
