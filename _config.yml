@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: cup
-subtitle: 1104
-description: hexo demo
+title: Hexo
+subtitle:
+description:
 author: John Doe
-language: zh
+language:
 timezone:
 
 # URL
@@ -18,8 +18,8 @@ permalink: :year/:month/:day/:title/
 permalink_defaults:
 
 # Directory
-source_dir: src # 项目源目录 名称
-public_dir: public
+source_dir: src
+public_dir: build
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
@@ -28,13 +28,13 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :year-:i_month-:day-:title.md # File name of new posts.  default=>:title.md
+new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
-render_drafts: false # false default
-post_asset_folder: true # 启用 资源 文件夹功能
+render_drafts: false
+post_asset_folder: false
 relative_link: false
 future: true
 highlight:
@@ -72,10 +72,9 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: 1104 #设置 渲染的主题
+theme: landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repo: https://github.com/wxungang/wxungang.github.io.git
+  type:
